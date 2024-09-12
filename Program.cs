@@ -26,38 +26,12 @@ app.MapControllerRoute(
 
 app.Run();
 
-//1. Controller (Denetleyici)
-//Ne İşe Yarar?: Kullanıcının tarayıcıdan yaptığı istekleri karşılayan ve yöneten sınıftır. HTTP isteklerini alır, ilgili işlemleri başlatır ve hangi verilerin gösterileceğini belirler.
-//Amaç?: İş mantığı ve kullanıcıdan gelen istekler ile sunulacak veri arasında köprü kurar. Bu istekleri ilgili Action metodlarına yönlendirir.
-
-//2. Action (Eylem)
-//Ne İşe Yarar?: Bir denetleyici içindeki her bir metod bir Action olarak adlandırılır. Kullanıcı bir URL'e istek yaptığında bu metotlar çalışır.
-//Amaç?: İlgili kullanıcı isteğini işleyip gerekli veriyi hazırlamak ve uygun bir yanıt döndürmek.
-
-//3. Model
-//Ne İşe Yarar?: Uygulamanın veritabanı veya veri yapısıyla ilgili kısımlarını temsil eder. Veriler genellikle bu model sınıflarında tanımlanır ve doğrulamalar yapılabilir.
-//Amaç?: Verilerin yapısını tanımlamak ve iş kurallarına göre işlemleri gerçekleştirmek.
-
-//4. View (Görünüm)
-//Ne İşe Yarar?: Kullanıcıya gösterilecek HTML içeriğinin oluşturulduğu yerdir. Controller tarafından sağlanan model verisini kullanıcıya görsel olarak sunar.
-//Amaç?: Veriyi uygun bir biçimde kullanıcı arayüzüne taşımak.
-
-//5. Razor
-//Ne İşe Yarar?: C# kodlarını HTML ile birlikte yazmayı sağlayan bir şablon dilidir. Dinamik web sayfaları oluşturmak için kullanılır.
-//Amaç?: Sunucu taraflı kod ile HTML içeriği birleştirip dinamik içerik oluşturmak.
-
-//6. Razor View
-//Ne İşe Yarar?: Razor şablonlarının(cshtml dosyalarının) bulunduğu yerdir. View'lar genellikle Razor dosyalarıyla temsil edilir.
-//Amaç?: HTML ve C# kodlarının bir arada kullanıldığı şablon dosyaları.
-
-//7. wwwroot
-//Ne İşe Yarar?: Uygulamanın tüm statik dosyalarının (CSS, JavaScript, resim dosyaları vb.) bulunduğu dizindir. Bu klasör dışındaki dosyalar doğrudan istemciler tarafından erişilemez.
-//Amaç?: Statik kaynak dosyalarını tutmak.
-
-//8.builder.Build()
-//Ne İşe Yarar?: ASP.NET Core uygulamasının yapılandırma aşamasının tamamlandığını belirtir ve uygulamayı başlatmaya hazır hale getirir.
-//Amaç?: Uygulamanın yapılandırılmasını bitirir ve gerekli bileşenlerin (middleware) sıralandığı bir uygulama nesnesi (IApplicationBuilder) döndürür.
-
-//9. app.Run()
-//Ne İşe Yarar?: Uygulamayı başlatan ve gelen HTTP isteklerini karşılayan bir middleware'i çalıştırır. Bu, genellikle uygulamanın son middleware'idir.
-//Amaç?: Uygulamayı çalıştırmak ve istemciden gelen HTTP isteklerini işlemek üzere hazırlamak.
+// Controller: MVC yapÄ±sÄ±nda controller, kullanÄ±cÄ±lardan gelen HTTP isteklerini iÅŸleyen sÄ±nÄ±ftÄ±r.
+// Action: Controller iÃ§inde, belirli bir HTTP isteÄŸini iÅŸleyen fonksiyonlara verilen isimdir.
+// Model: UygulamanÄ±n verilerinin iÅŸlenip tutulduÄŸu sÄ±nÄ±flarÄ± temsil eder. Veri tabanÄ± ile etkileÅŸim kurar.
+// View: KullanÄ±cÄ±ya gÃ¶sterilecek olan HTML sayfalarÄ±dÄ±r. Razor kullanÄ±larak dinamik iÃ§erik sunulabilir.
+// Razor: .cshtml dosyalarÄ±yla kullanÄ±lÄ±r ve C# kodunu HTML iÃ§inde dinamik olarak kullanmamÄ±zÄ± saÄŸlar.
+// RazorView: Dinamik olarak Ã¼retilen ve HTML Ã§Ä±ktÄ±sÄ± veren sayfalardÄ±r.
+// wwwroot: Statik dosyalarÄ±n tutulduÄŸu klasÃ¶rdÃ¼r. CSS, JS, resimler gibi dosyalar buraya yerleÅŸtirilir.
+// builder.Build(): UygulamayÄ± yapÄ±landÄ±rÄ±r ve Ã§alÄ±ÅŸtÄ±rmak Ã¼zere hazÄ±r hale getirir.
+// app.Run(): UygulamayÄ± baÅŸlatÄ±r ve gelen HTTP isteklerini dinlemeye baÅŸlar.
